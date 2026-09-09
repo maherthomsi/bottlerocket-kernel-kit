@@ -727,6 +727,9 @@ install -p -m 0644 %{S:222} %{S:224} %{buildroot}%{_cross_unitdir}
 %{_cross_kmoddir}/kernel/drivers/acpi/acpi_extlog.%{_ko}
 %{_cross_kmoddir}/kernel/drivers/acpi/acpi_pad.%{_ko}
 %endif
+%if "%{_cross_arch}" == "x86_64"
+%{_cross_kmoddir}/kernel/drivers/amazon/flash/aws_fwflash/aws_fwflash.%{_ko}
+%endif
 %{_cross_kmoddir}/kernel/drivers/amazon/media/v4l2-loopback/v4l2loopback.%{_ko}
 %{_cross_kmoddir}/kernel/drivers/amazon/net/ena/ena.%{_ko}
 %{_cross_kmoddir}/kernel/drivers/amazon/net/igb_uio/igb_uio.%{_ko}
